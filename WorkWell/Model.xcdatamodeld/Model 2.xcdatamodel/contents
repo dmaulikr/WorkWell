@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13E28" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="AudioFile" representedClassName="FileType" syncable="YES">
+        <attribute name="data" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="guidedMeditations" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GuidedMeditation" inverseName="audioFile" inverseEntity="GuidedMeditation" syncable="YES"/>
+        <relationship name="mindfulMinutes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MindfulMinute" inverseName="audioFile" inverseEntity="MindfulMinute" syncable="YES"/>
+    </entity>
+    <entity name="Course" representedClassName="Course" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="users" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="course" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="GuidedMeditation" representedClassName="GuidedMeditation" syncable="YES">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="audioFile" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AudioFile" inverseName="guidedMeditations" inverseEntity="AudioFile" syncable="YES"/>
+    </entity>
+    <entity name="Location" representedClassName="Location" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="users" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="location" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="MindfulMinute" representedClassName="MindfulMinute" syncable="YES">
+        <attribute name="alertBody" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="audioFile" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AudioFile" inverseName="mindfulMinutes" inverseEntity="AudioFile" syncable="YES"/>
+    </entity>
+    <entity name="PracticeSession" representedClassName="PracticeSession" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="duration" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="practiceSessions" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="course" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="users" inverseEntity="Course" syncable="YES"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="users" inverseEntity="Location" syncable="YES"/>
+        <relationship name="practiceSessions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PracticeSession" inverseName="user" inverseEntity="PracticeSession" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Course" positionX="-47" positionY="-28" width="128" height="73"/>
+        <element name="AudioFile" positionX="-297" positionY="-133" width="128" height="103"/>
+        <element name="GuidedMeditation" positionX="-92" positionY="-153" width="128" height="73"/>
+        <element name="Location" positionX="-47" positionY="62" width="128" height="73"/>
+        <element name="MindfulMinute" positionX="-513" positionY="-162" width="128" height="73"/>
+        <element name="PracticeSession" positionX="-513" positionY="83" width="128" height="88"/>
+        <element name="User" positionX="-288" positionY="17" width="128" height="133"/>
+    </elements>
+</model>

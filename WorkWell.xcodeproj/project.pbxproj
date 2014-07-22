@@ -14,13 +14,30 @@
 		AFB7765B197895C1009EC7E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB7765A197895C1009EC7E4 /* main.m */; };
 		AFB7765F197895C1009EC7E4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB7765E197895C1009EC7E4 /* AppDelegate.m */; };
 		AFB77662197895C1009EC7E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFB77660197895C1009EC7E4 /* Main.storyboard */; };
-		AFB77665197895C1009EC7E4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB77664197895C1009EC7E4 /* ViewController.m */; };
 		AFB77667197895C1009EC7E4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB77666197895C1009EC7E4 /* Images.xcassets */; };
 		AFB7766E197895C1009EC7E4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB7766D197895C1009EC7E4 /* XCTest.framework */; };
 		AFB7766F197895C1009EC7E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB7764E197895C1009EC7E4 /* Foundation.framework */; };
 		AFB77670197895C1009EC7E4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB77652197895C1009EC7E4 /* UIKit.framework */; };
 		AFB77678197895C1009EC7E4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AFB77676197895C1009EC7E4 /* InfoPlist.strings */; };
 		AFB7767A197895C1009EC7E4 /* WorkWellTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB77679197895C1009EC7E4 /* WorkWellTests.m */; };
+		AFB77684197895DC009EC7E4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB77683197895DC009EC7E4 /* CoreData.framework */; };
+		AFB776881978960D009EC7E4 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AFB776861978960D009EC7E4 /* Model.xcdatamodeld */; };
+		AFB7768C1978A7B3009EC7E4 /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB7768B1978A7B3009EC7E4 /* CoreDataHelper.m */; };
+		AFB77715197988B4009EC7E4 /* CoreDataTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB77714197988B4009EC7E4 /* CoreDataTVC.m */; };
+		AFB777191979919B009EC7E4 /* MindfulMinutesTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB777181979919B009EC7E4 /* MindfulMinutesTVC.m */; };
+		AFB7771E19799922009EC7E4 /* UsefulFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB7771D19799922009EC7E4 /* UsefulFunctions.m */; };
+		AFB7772A1979ACF9009EC7E4 /* Model4ToModel5.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = AFB777291979ACF9009EC7E4 /* Model4ToModel5.xcmappingmodel */; };
+		AFB777521979ED58009EC7E4 /* MindfulMinuteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB777511979ED58009EC7E4 /* MindfulMinuteVC.m */; };
+		AFB77772197B699E009EC7E4 /* tibetan_bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AFB77771197B699E009EC7E4 /* tibetan_bell.mp3 */; };
+		AFB777A5197B6BDD009EC7E4 /* Model5ToModel6.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = AFB777A4197B6BDD009EC7E4 /* Model5ToModel6.xcmappingmodel */; };
+		AFB777A8197B6C9A009EC7E4 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB777A7197B6C9A009EC7E4 /* User.m */; };
+		AFB777AB197B6C9B009EC7E4 /* MindfulMinuteTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB777AA197B6C9B009EC7E4 /* MindfulMinuteTemplate.m */; };
+		AFB777AE197B6C9B009EC7E4 /* PracticeSession.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB777AD197B6C9B009EC7E4 /* PracticeSession.m */; };
+		AFB777B1197B6C9B009EC7E4 /* AudioFile.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB777B0197B6C9B009EC7E4 /* AudioFile.m */; };
+		AFB777B4197B6C9B009EC7E4 /* MindfulMinuteInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB777B3197B6C9B009EC7E4 /* MindfulMinuteInstance.m */; };
+		AFB777B7197B6C9B009EC7E4 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB777B6197B6C9B009EC7E4 /* Course.m */; };
+		AFB777BA197B6C9B009EC7E4 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB777B9197B6C9B009EC7E4 /* Location.m */; };
+		AFB777BD197B6C9B009EC7E4 /* GuidedMeditation.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB777BC197B6C9B009EC7E4 /* GuidedMeditation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +62,48 @@
 		AFB7765D197895C1009EC7E4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AFB7765E197895C1009EC7E4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AFB77661197895C1009EC7E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AFB77663197895C1009EC7E4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AFB77664197895C1009EC7E4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AFB77666197895C1009EC7E4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AFB7766C197895C1009EC7E4 /* WorkWellTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkWellTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB7766D197895C1009EC7E4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		AFB77675197895C1009EC7E4 /* WorkWellTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WorkWellTests-Info.plist"; sourceTree = "<group>"; };
 		AFB77677197895C1009EC7E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AFB77679197895C1009EC7E4 /* WorkWellTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WorkWellTests.m; sourceTree = "<group>"; };
+		AFB77683197895DC009EC7E4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		AFB776871978960D009EC7E4 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		AFB7768A1978A7B3009EC7E4 /* CoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataHelper.h; sourceTree = "<group>"; };
+		AFB7768B1978A7B3009EC7E4 /* CoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelper.m; sourceTree = "<group>"; };
+		AFB776A21978EF0C009EC7E4 /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
+		AFB776BC19796A77009EC7E4 /* Model 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 3.xcdatamodel"; sourceTree = "<group>"; };
+		AFB77713197988B4009EC7E4 /* CoreDataTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTVC.h; sourceTree = "<group>"; };
+		AFB77714197988B4009EC7E4 /* CoreDataTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTVC.m; sourceTree = "<group>"; };
+		AFB777171979919B009EC7E4 /* MindfulMinutesTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MindfulMinutesTVC.h; sourceTree = "<group>"; };
+		AFB777181979919B009EC7E4 /* MindfulMinutesTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MindfulMinutesTVC.m; sourceTree = "<group>"; };
+		AFB7771A197995A0009EC7E4 /* Model 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 4.xcdatamodel"; sourceTree = "<group>"; };
+		AFB7771C19799922009EC7E4 /* UsefulFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsefulFunctions.h; sourceTree = "<group>"; };
+		AFB7771D19799922009EC7E4 /* UsefulFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsefulFunctions.m; sourceTree = "<group>"; };
+		AFB777221979A7C0009EC7E4 /* Model 5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 5.xcdatamodel"; sourceTree = "<group>"; };
+		AFB777291979ACF9009EC7E4 /* Model4ToModel5.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = Model4ToModel5.xcmappingmodel; sourceTree = "<group>"; };
+		AFB777501979ED58009EC7E4 /* MindfulMinuteVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MindfulMinuteVC.h; sourceTree = "<group>"; };
+		AFB777511979ED58009EC7E4 /* MindfulMinuteVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MindfulMinuteVC.m; sourceTree = "<group>"; };
+		AFB77771197B699E009EC7E4 /* tibetan_bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tibetan_bell.mp3; sourceTree = "<group>"; };
+		AFB777A3197B6B9D009EC7E4 /* Model 6.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 6.xcdatamodel"; sourceTree = "<group>"; };
+		AFB777A4197B6BDD009EC7E4 /* Model5ToModel6.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = Model5ToModel6.xcmappingmodel; sourceTree = "<group>"; };
+		AFB777A6197B6C9A009EC7E4 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		AFB777A7197B6C9A009EC7E4 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		AFB777A9197B6C9B009EC7E4 /* MindfulMinuteTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MindfulMinuteTemplate.h; sourceTree = "<group>"; };
+		AFB777AA197B6C9B009EC7E4 /* MindfulMinuteTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MindfulMinuteTemplate.m; sourceTree = "<group>"; };
+		AFB777AC197B6C9B009EC7E4 /* PracticeSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PracticeSession.h; sourceTree = "<group>"; };
+		AFB777AD197B6C9B009EC7E4 /* PracticeSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PracticeSession.m; sourceTree = "<group>"; };
+		AFB777AF197B6C9B009EC7E4 /* AudioFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFile.h; sourceTree = "<group>"; };
+		AFB777B0197B6C9B009EC7E4 /* AudioFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioFile.m; sourceTree = "<group>"; };
+		AFB777B2197B6C9B009EC7E4 /* MindfulMinuteInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MindfulMinuteInstance.h; sourceTree = "<group>"; };
+		AFB777B3197B6C9B009EC7E4 /* MindfulMinuteInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MindfulMinuteInstance.m; sourceTree = "<group>"; };
+		AFB777B5197B6C9B009EC7E4 /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
+		AFB777B6197B6C9B009EC7E4 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
+		AFB777B8197B6C9B009EC7E4 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		AFB777B9197B6C9B009EC7E4 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		AFB777BB197B6C9B009EC7E4 /* GuidedMeditation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidedMeditation.h; sourceTree = "<group>"; };
+		AFB777BC197B6C9B009EC7E4 /* GuidedMeditation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidedMeditation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFB77684197895DC009EC7E4 /* CoreData.framework in Frameworks */,
 				AFB77651197895C1009EC7E4 /* CoreGraphics.framework in Frameworks */,
 				AFB77653197895C1009EC7E4 /* UIKit.framework in Frameworks */,
 				AFB7764F197895C1009EC7E4 /* Foundation.framework in Frameworks */,
@@ -101,6 +153,7 @@
 		AFB7764D197895C1009EC7E4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AFB77683197895DC009EC7E4 /* CoreData.framework */,
 				AFB7764E197895C1009EC7E4 /* Foundation.framework */,
 				AFB77650197895C1009EC7E4 /* CoreGraphics.framework */,
 				AFB77652197895C1009EC7E4 /* UIKit.framework */,
@@ -112,11 +165,16 @@
 		AFB77654197895C1009EC7E4 /* WorkWell */ = {
 			isa = PBXGroup;
 			children = (
+				AFB77770197B6989009EC7E4 /* Media */,
+				AFB7774F1979ED0C009EC7E4 /* WorkWell Views */,
+				AFB7771B197998F0009EC7E4 /* Helper Functions */,
+				AFB7771619799159009EC7E4 /* WorkWell TableViews */,
+				AFB776A61978F427009EC7E4 /* Generic Core Data Classes */,
+				AFB776A51978F2C1009EC7E4 /* Mapping Models */,
+				AFB77685197895EC009EC7E4 /* Data */,
 				AFB7765D197895C1009EC7E4 /* AppDelegate.h */,
 				AFB7765E197895C1009EC7E4 /* AppDelegate.m */,
 				AFB77660197895C1009EC7E4 /* Main.storyboard */,
-				AFB77663197895C1009EC7E4 /* ViewController.h */,
-				AFB77664197895C1009EC7E4 /* ViewController.m */,
 				AFB77666197895C1009EC7E4 /* Images.xcassets */,
 				AFB77655197895C1009EC7E4 /* Supporting Files */,
 			);
@@ -150,6 +208,85 @@
 				AFB77676197895C1009EC7E4 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AFB77685197895EC009EC7E4 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AFB776861978960D009EC7E4 /* Model.xcdatamodeld */,
+				AFB777BB197B6C9B009EC7E4 /* GuidedMeditation.h */,
+				AFB777BC197B6C9B009EC7E4 /* GuidedMeditation.m */,
+				AFB777B8197B6C9B009EC7E4 /* Location.h */,
+				AFB777B9197B6C9B009EC7E4 /* Location.m */,
+				AFB777B5197B6C9B009EC7E4 /* Course.h */,
+				AFB777B6197B6C9B009EC7E4 /* Course.m */,
+				AFB777B2197B6C9B009EC7E4 /* MindfulMinuteInstance.h */,
+				AFB777B3197B6C9B009EC7E4 /* MindfulMinuteInstance.m */,
+				AFB777AF197B6C9B009EC7E4 /* AudioFile.h */,
+				AFB777B0197B6C9B009EC7E4 /* AudioFile.m */,
+				AFB777AC197B6C9B009EC7E4 /* PracticeSession.h */,
+				AFB777AD197B6C9B009EC7E4 /* PracticeSession.m */,
+				AFB777A9197B6C9B009EC7E4 /* MindfulMinuteTemplate.h */,
+				AFB777AA197B6C9B009EC7E4 /* MindfulMinuteTemplate.m */,
+				AFB777A6197B6C9A009EC7E4 /* User.h */,
+				AFB777A7197B6C9A009EC7E4 /* User.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		AFB776A51978F2C1009EC7E4 /* Mapping Models */ = {
+			isa = PBXGroup;
+			children = (
+				AFB777291979ACF9009EC7E4 /* Model4ToModel5.xcmappingmodel */,
+				AFB777A4197B6BDD009EC7E4 /* Model5ToModel6.xcmappingmodel */,
+			);
+			name = "Mapping Models";
+			sourceTree = "<group>";
+		};
+		AFB776A61978F427009EC7E4 /* Generic Core Data Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AFB7768A1978A7B3009EC7E4 /* CoreDataHelper.h */,
+				AFB7768B1978A7B3009EC7E4 /* CoreDataHelper.m */,
+				AFB77713197988B4009EC7E4 /* CoreDataTVC.h */,
+				AFB77714197988B4009EC7E4 /* CoreDataTVC.m */,
+			);
+			name = "Generic Core Data Classes";
+			sourceTree = "<group>";
+		};
+		AFB7771619799159009EC7E4 /* WorkWell TableViews */ = {
+			isa = PBXGroup;
+			children = (
+				AFB777171979919B009EC7E4 /* MindfulMinutesTVC.h */,
+				AFB777181979919B009EC7E4 /* MindfulMinutesTVC.m */,
+			);
+			name = "WorkWell TableViews";
+			sourceTree = "<group>";
+		};
+		AFB7771B197998F0009EC7E4 /* Helper Functions */ = {
+			isa = PBXGroup;
+			children = (
+				AFB7771C19799922009EC7E4 /* UsefulFunctions.h */,
+				AFB7771D19799922009EC7E4 /* UsefulFunctions.m */,
+			);
+			name = "Helper Functions";
+			sourceTree = "<group>";
+		};
+		AFB7774F1979ED0C009EC7E4 /* WorkWell Views */ = {
+			isa = PBXGroup;
+			children = (
+				AFB777501979ED58009EC7E4 /* MindfulMinuteVC.h */,
+				AFB777511979ED58009EC7E4 /* MindfulMinuteVC.m */,
+			);
+			name = "WorkWell Views";
+			sourceTree = "<group>";
+		};
+		AFB77770197B6989009EC7E4 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				AFB77771197B699E009EC7E4 /* tibetan_bell.mp3 */,
+			);
+			name = Media;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +368,7 @@
 				AFB77667197895C1009EC7E4 /* Images.xcassets in Resources */,
 				AFB77659197895C1009EC7E4 /* InfoPlist.strings in Resources */,
 				AFB77662197895C1009EC7E4 /* Main.storyboard in Resources */,
+				AFB77772197B699E009EC7E4 /* tibetan_bell.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,9 +387,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFB77665197895C1009EC7E4 /* ViewController.m in Sources */,
+				AFB777B1197B6C9B009EC7E4 /* AudioFile.m in Sources */,
+				AFB777A5197B6BDD009EC7E4 /* Model5ToModel6.xcmappingmodel in Sources */,
+				AFB7772A1979ACF9009EC7E4 /* Model4ToModel5.xcmappingmodel in Sources */,
+				AFB777A8197B6C9A009EC7E4 /* User.m in Sources */,
+				AFB777191979919B009EC7E4 /* MindfulMinutesTVC.m in Sources */,
+				AFB7771E19799922009EC7E4 /* UsefulFunctions.m in Sources */,
+				AFB777AE197B6C9B009EC7E4 /* PracticeSession.m in Sources */,
+				AFB77715197988B4009EC7E4 /* CoreDataTVC.m in Sources */,
 				AFB7765F197895C1009EC7E4 /* AppDelegate.m in Sources */,
+				AFB777AB197B6C9B009EC7E4 /* MindfulMinuteTemplate.m in Sources */,
 				AFB7765B197895C1009EC7E4 /* main.m in Sources */,
+				AFB777B4197B6C9B009EC7E4 /* MindfulMinuteInstance.m in Sources */,
+				AFB777B7197B6C9B009EC7E4 /* Course.m in Sources */,
+				AFB7768C1978A7B3009EC7E4 /* CoreDataHelper.m in Sources */,
+				AFB777BA197B6C9B009EC7E4 /* Location.m in Sources */,
+				AFB777BD197B6C9B009EC7E4 /* GuidedMeditation.m in Sources */,
+				AFB776881978960D009EC7E4 /* Model.xcdatamodeld in Sources */,
+				AFB777521979ED58009EC7E4 /* MindfulMinuteVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +609,7 @@
 				AFB7767F197895C1009EC7E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AFB77680197895C1009EC7E4 /* Build configuration list for PBXNativeTarget "WorkWellTests" */ = {
 			isa = XCConfigurationList;
@@ -464,8 +618,27 @@
 				AFB77682197895C1009EC7E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AFB776861978960D009EC7E4 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AFB777A3197B6B9D009EC7E4 /* Model 6.xcdatamodel */,
+				AFB777221979A7C0009EC7E4 /* Model 5.xcdatamodel */,
+				AFB776BC19796A77009EC7E4 /* Model 3.xcdatamodel */,
+				AFB7771A197995A0009EC7E4 /* Model 4.xcdatamodel */,
+				AFB776A21978EF0C009EC7E4 /* Model 2.xcdatamodel */,
+				AFB776871978960D009EC7E4 /* Model.xcdatamodel */,
+			);
+			currentVersion = AFB777A3197B6B9D009EC7E4 /* Model 6.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AFB77643197895C1009EC7E4 /* Project object */;
 }

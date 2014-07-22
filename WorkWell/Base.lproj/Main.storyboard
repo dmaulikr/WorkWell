@@ -1,25 +1,273 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5023" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="dGM-sA-HTw">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Tab Bar Controller-->
+        <scene sceneID="PmD-uB-mhD">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <tabBarController definesPresentationContext="YES" id="dGM-sA-HTw" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="C81-Cn-fzX">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="QJ6-ad-1np" kind="relationship" relationship="viewControllers" id="qEH-lh-1Qb"/>
+                        <segue destination="dJU-gt-XtY" kind="relationship" relationship="viewControllers" id="CJH-Ha-MY7"/>
+                        <segue destination="TKz-nh-qq2" kind="relationship" relationship="viewControllers" id="vGs-jn-sp5"/>
+                        <segue destination="EZn-pg-QK3" kind="relationship" relationship="viewControllers" id="uZg-Ly-l1V"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2kR-ih-J6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-437" y="-86"/>
+        </scene>
+        <!--View Controller - Stats-->
+        <scene sceneID="pFQ-ji-iNa">
+            <objects>
+                <viewController id="TKz-nh-qq2" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="1EG-EV-ExC"/>
+                        <viewControllerLayoutGuide type="bottom" id="HHg-q8-Kf5"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" id="vJA-rt-URc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Stats" id="z3T-0s-jaY"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="58J-c5-8cd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="107" y="229"/>
+        </scene>
+        <!--Table View Controller - Guided Meditations-->
+        <scene sceneID="ZTr-6g-bGO">
+            <objects>
+                <tableViewController id="dMY-Hd-pg7" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Gjb-MQ-B6S">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Guided Meditation Cell" id="SxG-NW-rq7">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SxG-NW-rq7" id="uHZ-ZA-ojR">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dMY-Hd-pg7" id="iGg-RT-ODa"/>
+                            <outlet property="delegate" destination="dMY-Hd-pg7" id="75r-Cm-Iyz"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Guided Meditations" id="XlO-tK-GSq"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="253-NR-PvS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="548" y="-506"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jKL-fa-BC5">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="79i-WA-JSm" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YrR-zz-8xp">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Vh1-Hd-UWZ" kind="relationship" relationship="rootViewController" id="eU0-9V-AjZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bmE-RD-zKG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="548" y="228"/>
+        </scene>
+        <!--Table View Controller - User Info-->
+        <scene sceneID="6io-0z-lM2">
+            <objects>
+                <tableViewController id="Vh1-Hd-UWZ" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eAP-MY-itb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="AO9-gp-sq3">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AO9-gp-sq3" id="JIp-wq-E1L">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Vh1-Hd-UWZ" id="U42-6T-zCs"/>
+                            <outlet property="delegate" destination="Vh1-Hd-UWZ" id="9Yp-8W-P0a"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="User Info" id="Uym-Aq-byg"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Y2-lZ-Spz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1005" y="229"/>
+        </scene>
+        <!--Navigation Controller - Mindful Minute-->
+        <scene sceneID="gTj-Kr-2hd">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="QJ6-ad-1np" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Mindful Minute" id="6uG-Z9-6Qb"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fbn-5L-m6f">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7Kw-Tm-sN8" kind="relationship" relationship="rootViewController" id="7aS-CX-Q9E"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qIq-D9-kwJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="107" y="-1210"/>
+        </scene>
+        <!--Mindful MinutesTVC - Mindful Minutes-->
+        <scene sceneID="t3b-RS-cq4">
+            <objects>
+                <tableViewController id="7Kw-Tm-sN8" customClass="MindfulMinutesTVC" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="WDp-6i-rfE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Mindful Minute Cell" id="SPQ-Ha-LJG">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SPQ-Ha-LJG" id="vuc-oo-Bfw">
+                                    <rect key="frame" x="0.0" y="0.0" width="253" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7Kw-Tm-sN8" id="HVO-7z-W5h"/>
+                            <outlet property="delegate" destination="7Kw-Tm-sN8" id="BJt-At-Tyc"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Mindful Minutes" id="cJh-Yg-2Jy">
+                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="McV-H5-S7s">
+                            <connections>
+                                <action selector="remove:" destination="7Kw-Tm-sN8" id="dwe-XY-qhk"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="mPI-yB-AIt">
+                            <connections>
+                                <segue destination="0qX-fz-gKs" kind="push" identifier="Add MindfulMinute Segue" id="E3T-Qy-Svt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cCC-ox-Xgc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="548" y="-1210"/>
+        </scene>
+        <!--Mindful MinuteVC-->
+        <scene sceneID="NqK-c1-mU2">
+            <objects>
+                <viewController storyboardIdentifier="MindfulMinuteVC" id="0qX-fz-gKs" customClass="MindfulMinuteVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KKh-F6-7fh"/>
+                        <viewControllerLayoutGuide type="bottom" id="3hT-Gs-91T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LGy-mb-vVA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="mwt-Y5-ifr">
+                                <rect key="frame" x="0.0" y="203" width="320" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="427490645.10430902">
+                                    <!--2014-07-19 19:24:05 +0000-->
+                                </date>
+                                <timeZone key="timeZone" name="America/Los_Angeles">
+                                    <data key="data">
+VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
+y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
+5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
+8n/BkPNvwKD0X6OQ9U+ioPY/hZD3L4Sg+CiiEPkPZqD6CIQQ+viDIPvoZhD82GUg/chIEP64RyD/qCoQ
+AJgpIAGIDBACeAsgA3EokARhJ6AFUQqQBkEJoAcw7JAHjUOgCRDOkAmtvyAK8LCQC+CvoAzZzRANwJGg
+DrmvEA+priAQmZEQEYmQIBJ5cxATaXIgFFlVEBVJVCAWOTcQFyk2IBgiU5AZCRggGgI1kBryNKAb4heQ
+HNIWoB3B+ZAesfigH6HbkCB2KyAhgb2QIlYNICNq2hAkNe8gJUq8ECYV0SAnKp4QJ/7toCkKgBAp3s+g
+KupiECu+saAs036QLZ6ToC6zYJAvfnWgMJNCkDFnkiAycySQM0d0IDRTBpA1J1YgNjLokDcHOCA4HAUQ
+OOcaIDn75xA6xvwgO9vJEDywGKA9u6sQPo/6oD+bjRBAb9ygQYSpkEJPvqBDZIuQRC+goEVEbZBF89Mg
+Ry2KEEfTtSBJDWwQSbOXIErtThBLnLOgTNZqkE18laBOtkyQT1x3oFCWLpBRPFmgUnYQkFMcO6BUVfKQ
+VPwdoFY11JBW5TogWB7xEFjFHCBZ/tMQWqT+IFvetRBchOAgXb6XEF5kwiBfnnkQYE3eoGGHlZBiLcCg
+Y2d3kGQNoqBlR1mQZe2EoGcnO5BnzWagaQcdkGmtSKBq5v+Qa5ZlIGzQHBBtdkcgbq/+EG9WKSBwj+AQ
+cTYLIHJvwhBzFe0gdE+kEHT/CaB2OMCQdt7roHgYopB4vs2gefiEkHqer6B72GaQfH6RoH24SJB+XnOg
+f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
+</data>
+                                </timeZone>
+                                <connections>
+                                    <action selector="updateMindfulMinuteInstance:" destination="0qX-fz-gKs" eventType="valueChanged" id="S8I-F5-qUX"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1Rk-AV-o4N">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="d9V-qP-MM5">
+                            <connections>
+                                <action selector="done:" destination="0qX-fz-gKs" id="naU-0U-1eU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="timePicker" destination="mwt-Y5-ifr" id="y8p-qC-r1l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1tJ-kY-fNR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="986" y="-1210"/>
+        </scene>
+        <!--Navigation Controller - Guided Meditation-->
+        <scene sceneID="UP6-Ko-6y4">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="dJU-gt-XtY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Guided Meditation" id="xJG-KS-EfZ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gmB-aF-Oe7">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dMY-Hd-pg7" kind="relationship" relationship="rootViewController" id="vZX-le-qWM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="44F-2C-mTC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="107" y="-506"/>
+        </scene>
+        <!--View Controller - Meditation Timer-->
+        <scene sceneID="XTJ-YX-3Q3">
+            <objects>
+                <viewController id="EZn-pg-QK3" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sAr-4w-mCg"/>
+                        <viewControllerLayoutGuide type="bottom" id="qRa-tm-2IX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fDg-a4-PhB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Meditation Timer" id="0Qn-RR-f3p"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uGf-rG-DEO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="107" y="1029"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
