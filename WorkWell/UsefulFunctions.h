@@ -9,10 +9,12 @@
 #import <Foundation/Foundation.h>
 
 @interface UsefulFunctions : NSObject
-+ (NSDictionary *)hoursMinutesSeconds:(NSTimeInterval)timeInterval;
-+ (NSDictionary *)timeOfDayWithPeriod:(NSTimeInterval)timeInterval;
++ (NSDate*)startOfDayWithDate:(NSDate*)date;
++ (NSDate*)nextDateWithTimeOfDayFromDate:(NSDate*)theDate;
++ (NSDate*)nextDateWithTimeOfDayFromTimeInterval:(NSTimeInterval)timeInterval;
 + (NSTimeInterval)timeIntervalWithHours:(NSUInteger)hours minutes:(NSUInteger)minutes seconds:(NSUInteger)seconds;
-+ (NSDate*)startOfDayWithDate:(NSDate *)date;
-+ (NSTimeInterval)timeIntervalFromHoursAndMinutesOfDate:(NSDate *)date;
++ (NSTimeInterval)timeIntervalFromHoursAndMinutesOfDate:(NSDate*)date;
++ (NSDate*)dateByAddingDays:(NSUInteger)days toDate:(NSDate*)date;
++ (id)randomObjectFromArray:(NSArray*)array;
 
 @end

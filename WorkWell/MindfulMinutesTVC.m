@@ -21,7 +21,7 @@
 @end
 
 @implementation MindfulMinutesTVC
-#define debug 1
+#define debug 0
 
 #pragma mark - DATA
 - (void)configureFetch {
@@ -54,11 +54,11 @@
     [self performFetch];
     self.clearConfirmActionSheet.delegate = self;
     
-    CoreDataHelper *cdh = [(AppDelegate*)[[UIApplication sharedApplication] delegate] cdh];
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"AudioFile"];
-    AudioFile *audioFile = [[cdh.context executeFetchRequest:request error:nil] objectAtIndex:0];
-    self.player = [[AVAudioPlayer alloc] initWithData:audioFile.data fileTypeHint:@"mp3" error:nil];
-    NSLog(@"playing: %@", [self.player play]?@"YES":@"NO");
+//    CoreDataHelper *cdh = [(AppDelegate*)[[UIApplication sharedApplication] delegate] cdh];
+//    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"AudioFile"];
+//    AudioFile *audioFile = [[cdh.context executeFetchRequest:request error:nil] objectAtIndex:0];
+//    self.player = [[AVAudioPlayer alloc] initWithData:audioFile.data fileTypeHint:@"mp3" error:nil];
+//    NSLog(@"playing: %@", [self.player play]?@"YES":@"NO");
     
     // Respond to changes in underlying store
     [[NSNotificationCenter defaultCenter] addObserver:self

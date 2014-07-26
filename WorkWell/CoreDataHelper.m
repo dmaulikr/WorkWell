@@ -63,8 +63,8 @@ NSString * kStoreFilename = @"WorkWell.sqlite";
     NSMutableDictionary *options = [NSMutableDictionary dictionary];
     [options setObject:[NSNumber numberWithBool:YES]
                 forKey:NSMigratePersistentStoresAutomaticallyOption];
-//    [options setObject:[NSNumber numberWithBool:YES]
-//                forKey:NSInferMappingModelAutomaticallyOption];
+    [options setObject:[NSNumber numberWithBool:YES]
+                forKey:NSInferMappingModelAutomaticallyOption];
     
     NSError *error = nil;
     _store = [_coordinator addPersistentStoreWithType:NSSQLiteStoreType

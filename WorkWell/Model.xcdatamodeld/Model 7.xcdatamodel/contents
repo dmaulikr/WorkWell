@@ -4,7 +4,6 @@
         <attribute name="data" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="guidedMeditations" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GuidedMeditation" inverseName="audioFile" inverseEntity="GuidedMeditation" syncable="YES"/>
-        <relationship name="mindfulMinuteTemplates" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MindfulMinuteTemplate" inverseName="audioFile" inverseEntity="MindfulMinuteTemplate" syncable="YES"/>
     </entity>
     <entity name="Course" representedClassName="Course" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -23,7 +22,7 @@
     </entity>
     <entity name="MindfulMinuteTemplate" representedClassName="MindfulMinuteTemplate" syncable="YES">
         <attribute name="alertBody" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="audioFile" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AudioFile" inverseName="mindfulMinuteTemplates" inverseEntity="AudioFile" syncable="YES"/>
+        <attribute name="soundName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="PracticeSession" representedClassName="PracticeSession" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
@@ -40,7 +39,7 @@
         <relationship name="practiceSessions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PracticeSession" inverseName="user" inverseEntity="PracticeSession" syncable="YES"/>
     </entity>
     <elements>
-        <element name="AudioFile" positionX="-297" positionY="-133" width="128" height="103"/>
+        <element name="AudioFile" positionX="-297" positionY="-133" width="128" height="88"/>
         <element name="Course" positionX="-47" positionY="-28" width="128" height="73"/>
         <element name="GuidedMeditation" positionX="-92" positionY="-153" width="128" height="73"/>
         <element name="Location" positionX="-47" positionY="62" width="128" height="73"/>

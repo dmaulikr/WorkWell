@@ -79,7 +79,18 @@
     return theDate;
 }
 
++ (NSDate*)nextDateWithTimeOfDayFromTimeInterval:(NSTimeInterval)timeInterval {
+    NSDate *today = [self startOfDayWithDate:[NSDate date]];
+    return [today dateByAddingTimeInterval:timeInterval];
+}
 
++ (NSDate*)dateByAddingDays:(NSUInteger)days toDate:(NSDate*)date {
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendar components:ALL_CALENDAR_COMPONENTS fromDate:date];
+    components.day += days;
+    
+    return [calendar dateFromComponents:components];
+}
 
 + (NSTimeInterval)timeIntervalFromHoursAndMinutesOfDate:(NSDate *)date {
     NSCalendar *calendar = [NSCalendar currentCalendar];
@@ -87,5 +98,9 @@
     
     NSTimeInterval interval = [self timeIntervalWithHours:components.hour minutes:components.minute seconds:0];
     return interval;
+}
+
++ (id)randomObjectFromArray:(NSArray*)array {
+    return [array objectAtIndex:(arc4random() % array.count)];
 }
 @end
