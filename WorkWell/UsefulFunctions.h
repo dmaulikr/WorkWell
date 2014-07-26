@@ -16,5 +16,8 @@
 + (NSTimeInterval)timeIntervalFromHoursAndMinutesOfDate:(NSDate*)date;
 + (NSDate*)dateByAddingDays:(NSUInteger)days toDate:(NSDate*)date;
 + (id)randomObjectFromArray:(NSArray*)array;
++ (NSDate*)nextWeekdayAfterDate:(NSDate*)date;
++ (NSDate*)nextWeekdayWithTimeOfDayFromTimeInterval:(NSTimeInterval)timeInterval;
++ (NSInteger)weekdayFromDate:(NSDate*)date;
 
 @end

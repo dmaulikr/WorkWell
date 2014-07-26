@@ -97,6 +97,7 @@
 #pragma mark - DATA
 
 - (void)populateDatabase {
+    // MARK: for testing purposes only
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *components;
@@ -254,7 +255,7 @@
     //get notifications from application
     NSArray *notifications = [[[UIApplication sharedApplication] scheduledLocalNotifications] sortedArrayUsingComparator:notificationComparator];
     
-    // TODO: update to skip notification update when allowableNotificationCount==0
+    // MARK: update to skip notification update when allowableNotificationCount==0
     int remainingAllowableNotificationsCount = (kMaxNotificationsAllowed + notifications.count) / mmis.count;
     int totalAllowableNotificationsCount = kMaxNotificationsAllowed / mmis.count;
     if (debug == 1) {NSLog(@"total notifications allowed for each scheduled time: %d\n", remainingAllowableNotificationsCount);}
@@ -280,8 +281,9 @@
     NSLog(@"notifications count: %d", notifications.count);
     
     // assign notifications to arrays in mmArray
-    // TODO: cancel notifications without corresponding MindfulMinuteInstances
+    // MARK: cancel notifications without corresponding MindfulMinuteInstances
     for (UILocalNotification *notification in notifications) {
+        BOOL notificationHasCorrespondingMindfulMinuteInstance = NO;
         for (mmSubArray in mmArray) {
             NSMutableArray *notificationArray = [mmSubArray objectAtIndex:1];
             NSTimeInterval mmiTimeOfDay = [[[mmSubArray objectAtIndex:0] timeOfDay] doubleValue];
@@ -289,12 +291,17 @@
             if (notificationFireDateTI == mmiTimeOfDay) {
                 if (debug==1) {NSLog(@"mmiTimeOfDay: %f; notificationFireDateTI: %f", mmiTimeOfDay, notificationFireDateTI);}
                 [notificationArray addObject:notification];
+                notificationHasCorrespondingMindfulMinuteInstance = YES;
                 break;
             }
             // MARK: cancel notification without instance backing it up
 //            if (![notificationArray containsObject:notification]) {
 //                [[UIApplication sharedApplication] cancelLocalNotification:notification];
 //            }
+        }
+        
+        if (!notificationHasCorrespondingMindfulMinuteInstance) {
+            [[UIApplication sharedApplication] cancelLocalNotification:notification];
         }
     }
     
@@ -335,14 +342,14 @@
     }
     
     // build and schedule notifications
-    // TODO: exclude Saturday & Sunday notification scheduling
+    // MARK: exclude Saturday & Sunday notification scheduling
     for (mmSubArray in mmArray) {
         for (int i = ([[mmSubArray objectAtIndex:1] count]); i < totalAllowableNotificationsCount; i++) {
             NSDate *date;
             if (i == 0) {
-                date = [UsefulFunctions nextDateWithTimeOfDayFromTimeInterval:[[[mmSubArray objectAtIndex:0] timeOfDay] doubleValue]];
+                date = [UsefulFunctions nextWeekdayWithTimeOfDayFromTimeInterval:[[[mmSubArray objectAtIndex:0] timeOfDay] doubleValue]];
             } else {
-                date = [UsefulFunctions dateByAddingDays:1 toDate:[mmSubArray[1][(i-1)] fireDate]];
+                date = [UsefulFunctions dateByAddingDays:1 toDate:[UsefulFunctions nextWeekdayAfterDate:[mmSubArray[1][(i-1)] fireDate]]];
             }
 //            NSLog(@"mmSubArray.count index 1: %d - supposed notificationArray index: %d", [mmSubArray[1] count], i-1);
             
@@ -353,10 +360,10 @@
             theNotification.alertBody = mmt.alertBody;
             theNotification.soundName = mmt.soundName;
             
-//            [[UIApplication sharedApplication] scheduleLocalNotification:theNotification];
+            [[UIApplication sharedApplication] scheduleLocalNotification:theNotification];
             [[mmSubArray objectAtIndex:1] addObject:theNotification];
             if (debug==1) {
-                NSLog(@"%d '%@': %@", i, theNotification.alertBody, theNotification.soundName);
+//                NSLog(@"%d '%@': %@", i, theNotification.alertBody, theNotification.soundName);
                 NSLog(@"notification scheduled: %@ '%@'", [_df stringFromDate:theNotification.fireDate], theNotification.alertBody);
             }
         }

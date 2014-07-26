@@ -103,4 +103,33 @@
 + (id)randomObjectFromArray:(NSArray*)array {
     return [array objectAtIndex:(arc4random() % array.count)];
 }
+
++ (NSDate*)nextWeekdayAfterDate:(NSDate*)date {
+    NSDate *next;
+    NSInteger weekday = [self weekdayFromDate:date];
+    
+    switch (weekday) {
+        case 1:
+            next = [self dateByAddingDays:1 toDate:date];
+            break;
+        case 7:
+            next = [self dateByAddingDays:2 toDate:date];
+            break;
+        default:
+            next = date;
+            break;
+    }
+    
+    return next;
+}
+
++ (NSDate*)nextWeekdayWithTimeOfDayFromTimeInterval:(NSTimeInterval)timeInterval {
+    NSDate *date = [self nextDateWithTimeOfDayFromTimeInterval:timeInterval];
+    return [self nextWeekdayAfterDate:date];
+}
+
++ (NSInteger)weekdayFromDate:(NSDate*)date {
+    NSDateComponents *weekdayComponent = [[NSCalendar currentCalendar] components:NSWeekdayCalendarUnit fromDate:date];
+    return [weekdayComponent weekday];
+}
 @end
