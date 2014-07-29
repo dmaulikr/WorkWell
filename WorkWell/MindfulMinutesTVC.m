@@ -12,9 +12,11 @@
 #import "AppDelegate.h"
 #import "UsefulFunctions.h"
 #import "MindfulMinuteVC.h"
+//  TODO: no longer reference AVFoundation when app finished
 @import AVFoundation;
 
 @interface MindfulMinutesTVC()
+//  TODO: remove audioPlayer when app finished
 @property (strong, nonatomic) AVAudioPlayer *player;
 
 - (IBAction)remove:(id)sender;
@@ -54,6 +56,18 @@
     [self performFetch];
     self.clearConfirmActionSheet.delegate = self;
     
+//    CoreDataHelper *cdh = [(AppDelegate*)[[UIApplication sharedApplication] delegate] cdh];
+//    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"AudioFile"];
+//    NSError *error = nil;
+//    NSArray *fetchedObjects = [cdh.context executeFetchRequest:request error:&error];
+//    if (error) {NSLog(@"Error: %@ '%@'", error, [error localizedDescription]);}
+//
+//    AudioFile *audioFile = fetchedObjects[0];
+//    self.player = [[AVAudioPlayer alloc] initWithData:audioFile.data fileTypeHint:@"mp3" error:&error];
+//    [self.player play];
+//    if (error) {NSLog(@"Error: %@ '%@'", error, [error localizedDescription]);}
+    
+//    TODO: remove when app built
 //    CoreDataHelper *cdh = [(AppDelegate*)[[UIApplication sharedApplication] delegate] cdh];
 //    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"AudioFile"];
 //    AudioFile *audioFile = [[cdh.context executeFetchRequest:request error:nil] objectAtIndex:0];

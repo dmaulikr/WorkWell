@@ -14,25 +14,58 @@
 @end
 
 @implementation AppDelegate
+// TODO cleanup constants and rework pragma marks to clarify purpose
 
 #pragma mark - CONSTANTS
-#define debug 1
-//#define kMindfulMinuteTemplatesKey @"MindfulMinuteTemplates"
-//#define kMindfulMinuteInstancesKey @"MindfulMinuteInstances"
-//#define kAlertBodyKey @"alertBody"
-//#define kAudioFileKey @"audioFile"
+#define debug 0
 #define kMaxNotificationsAllowed 64
 
 #pragma mark - DELEGATE
 - (void)demo {
     if (debug==1) {NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));}
-//    [self clearData];
-//    [self populateDatabase];
-    [[UIApplication sharedApplication] cancelAllLocalNotifications];
-    [self updateNotifications];
-//    [self displayNotifications];
-//    [self displayInstances];
-//    [_coreDataHelper saveContext];
+    
+    // MARK: load sample audio into database
+//    NSString *fiveMinFile = [[NSBundle mainBundle] pathForResource:@"5_minute_meditation" ofType:@"mp3"];
+//    NSURL *fiveMinURL = [NSURL fileURLWithPath:fiveMinFile];
+//    
+//    NSLog(@"five minute URL: %@", [fiveMinURL path]);
+//    NSError *error = nil;
+//    AudioFile *audioFile = [NSEntityDescription insertNewObjectForEntityForName:@"AudioFile" inManagedObjectContext:_coreDataHelper.context];
+//    [audioFile setData:[NSData dataWithContentsOfURL:fiveMinURL options:NSDataReadingMappedIfSafe error:&error]];
+//    if (error) {
+//        NSLog(@"Error: %@ '%@'", error, [error localizedDescription]);
+//    }
+//    audioFile.name = @"Five Minute Meditation";
+//    NSLog(@"safe loading!");
+    
+//    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"AudioFile"];
+//    NSError *error = nil;
+//    NSArray *fetchedObjects = [_coreDataHelper.context executeFetchRequest:request error:&error];
+//    if (error) {NSLog(@"Error: %@", error.localizedDescription);}
+//    for (AudioFile *object in fetchedObjects) {
+//        [_coreDataHelper.context deleteObject:object];
+//    }
+    
+//    [self updateNotifications];
+//    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"AudioFile"];
+//    NSError *error = nil;
+//    AudioFile *meditationFile = [[_coreDataHelper.context executeFetchRequest:request error:&error] objectAtIndex:0];
+//    if (error) {NSLog(@"Error: %@ '%@'", error, [error localizedDescription]);}
+//    
+//    GuidedMeditation *guidedMeditation;
+//    
+//    for (int i = 0; i < 10; i++) {
+//        guidedMeditation = [NSEntityDescription insertNewObjectForEntityForName:@"GuidedMeditation" inManagedObjectContext:_coreDataHelper.context];
+//        guidedMeditation.audioFile = meditationFile;
+//        guidedMeditation.title = [NSString stringWithFormat:@"Guided Meditation %02d", i+1];
+//    }
+//    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"GuidedMeditation"];
+//    NSArray *fetchedObjects = [_coreDataHelper.context executeFetchRequest:request error:nil];
+//    for (GuidedMeditation *gm in fetchedObjects) {
+//        [_coreDataHelper.context deleteObject:gm];
+//    }
+    
+    [_coreDataHelper saveContext];
 }
 
 - (CoreDataHelper*)cdh {
@@ -94,7 +127,7 @@
     return _df;
 }
 
-#pragma mark - DATA
+#pragma mark - MINDFUL MINUTE MANAGER
 
 - (void)populateDatabase {
     // MARK: for testing purposes only
@@ -227,6 +260,7 @@
 
 #pragma mark - NOTIFICATIONS
 - (void)updateNotifications {
+    // TODO: cleanup code and debugging tools
     
     // get MindfulMinuteInstances from "database"
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"MindfulMinuteInstance"];
@@ -369,6 +403,5 @@
         }
     }
 }
-
 
 @end

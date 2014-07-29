@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF0BA7A619875D66001ADA56 /* GuidedMeditationsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AF0BA7A519875D66001ADA56 /* GuidedMeditationsTVC.m */; };
 		AF22CBCB19829D77002C2D95 /* beep-ping.wav in Resources */ = {isa = PBXBuildFile; fileRef = AF22CBC519829D77002C2D95 /* beep-ping.wav */; };
 		AF22CBCC19829D77002C2D95 /* zen-temple-bell.wav in Resources */ = {isa = PBXBuildFile; fileRef = AF22CBC619829D77002C2D95 /* zen-temple-bell.wav */; };
 		AF22CBCD19829D77002C2D95 /* doorbell.wav in Resources */ = {isa = PBXBuildFile; fileRef = AF22CBC719829D77002C2D95 /* doorbell.wav */; };
@@ -21,6 +22,7 @@
 		AF22CBE319831E85002C2D95 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = AF22CBE219831E85002C2D95 /* User.m */; };
 		AF22CBE619831E86002C2D95 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = AF22CBE519831E86002C2D95 /* Course.m */; };
 		AF22CBE919831E86002C2D95 /* AudioFile.m in Sources */ = {isa = PBXBuildFile; fileRef = AF22CBE819831E86002C2D95 /* AudioFile.m */; };
+		AFAA61F019871C47002B7BC8 /* 5_minute_meditation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AFAA61EF19871C47002B7BC8 /* 5_minute_meditation.mp3 */; };
 		AFB7764F197895C1009EC7E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB7764E197895C1009EC7E4 /* Foundation.framework */; };
 		AFB77651197895C1009EC7E4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB77650197895C1009EC7E4 /* CoreGraphics.framework */; };
 		AFB77653197895C1009EC7E4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB77652197895C1009EC7E4 /* UIKit.framework */; };
@@ -57,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF0BA7A419875D66001ADA56 /* GuidedMeditationsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidedMeditationsTVC.h; sourceTree = "<group>"; };
+		AF0BA7A519875D66001ADA56 /* GuidedMeditationsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidedMeditationsTVC.m; sourceTree = "<group>"; };
 		AF22CBC519829D77002C2D95 /* beep-ping.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "beep-ping.wav"; sourceTree = "<group>"; };
 		AF22CBC619829D77002C2D95 /* zen-temple-bell.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "zen-temple-bell.wav"; sourceTree = "<group>"; };
 		AF22CBC719829D77002C2D95 /* doorbell.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = doorbell.wav; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 		AF22CBE519831E86002C2D95 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
 		AF22CBE719831E86002C2D95 /* AudioFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFile.h; sourceTree = "<group>"; };
 		AF22CBE819831E86002C2D95 /* AudioFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioFile.m; sourceTree = "<group>"; };
+		AFAA61EF19871C47002B7BC8 /* 5_minute_meditation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 5_minute_meditation.mp3; sourceTree = "<group>"; };
 		AFB7764B197895C1009EC7E4 /* WorkWell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkWell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB7764E197895C1009EC7E4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AFB77650197895C1009EC7E4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -227,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				AF22CBD219831E85002C2D95 /* GuidedMeditation.h */,
+				AF22CBD319831E85002C2D95 /* GuidedMeditation.m */,
 				AF22CBE719831E86002C2D95 /* AudioFile.h */,
 				AF22CBE819831E86002C2D95 /* AudioFile.m */,
 				AF22CBE419831E86002C2D95 /* Course.h */,
@@ -241,7 +247,6 @@
 				AF22CBD919831E85002C2D95 /* Location.m */,
 				AF22CBD519831E85002C2D95 /* PracticeSession.h */,
 				AF22CBD619831E85002C2D95 /* PracticeSession.m */,
-				AF22CBD319831E85002C2D95 /* GuidedMeditation.m */,
 				AFB776861978960D009EC7E4 /* Model.xcdatamodeld */,
 			);
 			name = Data;
@@ -272,6 +277,8 @@
 			children = (
 				AFB777171979919B009EC7E4 /* MindfulMinutesTVC.h */,
 				AFB777181979919B009EC7E4 /* MindfulMinutesTVC.m */,
+				AF0BA7A419875D66001ADA56 /* GuidedMeditationsTVC.h */,
+				AF0BA7A519875D66001ADA56 /* GuidedMeditationsTVC.m */,
 			);
 			name = "WorkWell TableViews";
 			sourceTree = "<group>";
@@ -297,6 +304,7 @@
 		AFB77770197B6989009EC7E4 /* Media */ = {
 			isa = PBXGroup;
 			children = (
+				AFAA61EF19871C47002B7BC8 /* 5_minute_meditation.mp3 */,
 				AF22CBC519829D77002C2D95 /* beep-ping.wav */,
 				AF22CBC619829D77002C2D95 /* zen-temple-bell.wav */,
 				AF22CBC719829D77002C2D95 /* doorbell.wav */,
@@ -394,6 +402,7 @@
 				AFB77772197B699E009EC7E4 /* tibetan_bell.mp3 in Resources */,
 				AF22CBCE19829D77002C2D95 /* ting.wav in Resources */,
 				AF22CBCB19829D77002C2D95 /* beep-ping.wav in Resources */,
+				AFAA61F019871C47002B7BC8 /* 5_minute_meditation.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +432,7 @@
 				AF22CBD719831E85002C2D95 /* PracticeSession.m in Sources */,
 				AFB7771E19799922009EC7E4 /* UsefulFunctions.m in Sources */,
 				AFB77715197988B4009EC7E4 /* CoreDataTVC.m in Sources */,
+				AF0BA7A619875D66001ADA56 /* GuidedMeditationsTVC.m in Sources */,
 				AF22CBDD19831E85002C2D95 /* MindfulMinuteTemplate.m in Sources */,
 				AFB7765F197895C1009EC7E4 /* AppDelegate.m in Sources */,
 				AFB7765B197895C1009EC7E4 /* main.m in Sources */,

@@ -44,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="107" y="229"/>
         </scene>
-        <!--Table View Controller - Guided Meditations-->
+        <!--Guided MeditationsTVC - Guided Meditations-->
         <scene sceneID="ZTr-6g-bGO">
             <objects>
-                <tableViewController id="dMY-Hd-pg7" sceneMemberID="viewController">
+                <tableViewController id="dMY-Hd-pg7" customClass="GuidedMeditationsTVC" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Gjb-MQ-B6S">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

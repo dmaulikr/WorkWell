@@ -14,6 +14,7 @@
 #import "MindfulMinuteInstance.h"
 #import "UsefulFunctions.h"
 #import "AudioFile.h"
+#import "GuidedMeditation.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
