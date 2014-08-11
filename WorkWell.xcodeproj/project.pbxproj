@@ -8,20 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		AF0BA7A619875D66001ADA56 /* GuidedMeditationsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AF0BA7A519875D66001ADA56 /* GuidedMeditationsTVC.m */; };
+		AF1929CA198869E400CC9B91 /* GuidedMeditationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1929C9198869E400CC9B91 /* GuidedMeditationVC.m */; };
 		AF22CBCB19829D77002C2D95 /* beep-ping.wav in Resources */ = {isa = PBXBuildFile; fileRef = AF22CBC519829D77002C2D95 /* beep-ping.wav */; };
 		AF22CBCC19829D77002C2D95 /* zen-temple-bell.wav in Resources */ = {isa = PBXBuildFile; fileRef = AF22CBC619829D77002C2D95 /* zen-temple-bell.wav */; };
 		AF22CBCD19829D77002C2D95 /* doorbell.wav in Resources */ = {isa = PBXBuildFile; fileRef = AF22CBC719829D77002C2D95 /* doorbell.wav */; };
 		AF22CBCE19829D77002C2D95 /* ting.wav in Resources */ = {isa = PBXBuildFile; fileRef = AF22CBC819829D77002C2D95 /* ting.wav */; };
 		AF22CBCF19829D77002C2D95 /* ship-bell.wav in Resources */ = {isa = PBXBuildFile; fileRef = AF22CBC919829D77002C2D95 /* ship-bell.wav */; };
 		AF22CBD019829D77002C2D95 /* gong.wav in Resources */ = {isa = PBXBuildFile; fileRef = AF22CBCA19829D77002C2D95 /* gong.wav */; };
-		AF22CBD419831E85002C2D95 /* GuidedMeditation.m in Sources */ = {isa = PBXBuildFile; fileRef = AF22CBD319831E85002C2D95 /* GuidedMeditation.m */; };
-		AF22CBD719831E85002C2D95 /* PracticeSession.m in Sources */ = {isa = PBXBuildFile; fileRef = AF22CBD619831E85002C2D95 /* PracticeSession.m */; };
-		AF22CBDA19831E85002C2D95 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = AF22CBD919831E85002C2D95 /* Location.m */; };
-		AF22CBDD19831E85002C2D95 /* MindfulMinuteTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF22CBDC19831E85002C2D95 /* MindfulMinuteTemplate.m */; };
-		AF22CBE019831E85002C2D95 /* MindfulMinuteInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = AF22CBDF19831E85002C2D95 /* MindfulMinuteInstance.m */; };
-		AF22CBE319831E85002C2D95 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = AF22CBE219831E85002C2D95 /* User.m */; };
-		AF22CBE619831E86002C2D95 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = AF22CBE519831E86002C2D95 /* Course.m */; };
-		AF22CBE919831E86002C2D95 /* AudioFile.m in Sources */ = {isa = PBXBuildFile; fileRef = AF22CBE819831E86002C2D95 /* AudioFile.m */; };
+		AF387609198B1FE30090D5EC /* AddUserVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AF387608198B1FE30090D5EC /* AddUserVC.m */; };
+		AF6AC7F219887EDF0089855A /* MeditationTimerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6AC7F119887EDF0089855A /* MeditationTimerVC.m */; };
+		AF6AC7F8198946E00089855A /* StatsTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6AC7F7198946E00089855A /* StatsTVC.m */; };
+		AF6AC815198972070089855A /* CoreDataPickerTF.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6AC814198972070089855A /* CoreDataPickerTF.m */; };
+		AF6AC81C198975660089855A /* PickerTF_User.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6AC81B198975660089855A /* PickerTF_User.m */; };
+		AF6AC81F198977B90089855A /* UserInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6AC81E198977B90089855A /* UserInfoVC.m */; };
+		AF95FC271992972F00D792F3 /* PickerTF_Location.m in Sources */ = {isa = PBXBuildFile; fileRef = AF95FC261992972F00D792F3 /* PickerTF_Location.m */; };
+		AF95FC2A1992974200D792F3 /* PickerTF_Course.m in Sources */ = {isa = PBXBuildFile; fileRef = AF95FC291992974200D792F3 /* PickerTF_Course.m */; };
 		AFAA61F019871C47002B7BC8 /* 5_minute_meditation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AFAA61EF19871C47002B7BC8 /* 5_minute_meditation.mp3 */; };
 		AFB7764F197895C1009EC7E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB7764E197895C1009EC7E4 /* Foundation.framework */; };
 		AFB77651197895C1009EC7E4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB77650197895C1009EC7E4 /* CoreGraphics.framework */; };
@@ -46,6 +47,14 @@
 		AFB777521979ED58009EC7E4 /* MindfulMinuteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB777511979ED58009EC7E4 /* MindfulMinuteVC.m */; };
 		AFB77772197B699E009EC7E4 /* tibetan_bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AFB77771197B699E009EC7E4 /* tibetan_bell.mp3 */; };
 		AFB777A5197B6BDD009EC7E4 /* Model5ToModel6.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = AFB777A4197B6BDD009EC7E4 /* Model5ToModel6.xcmappingmodel */; };
+		AFC480F7198D3EB7006BCC52 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC480F6198D3EB7006BCC52 /* Location.m */; };
+		AFC480FA198D3EB7006BCC52 /* MindfulMinuteTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC480F9198D3EB7006BCC52 /* MindfulMinuteTemplate.m */; };
+		AFC480FD198D3EB7006BCC52 /* MindfulMinuteInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC480FC198D3EB7006BCC52 /* MindfulMinuteInstance.m */; };
+		AFC48100198D3EB7006BCC52 /* AudioFile.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC480FF198D3EB7006BCC52 /* AudioFile.m */; };
+		AFC48103198D3EB7006BCC52 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC48102198D3EB7006BCC52 /* Course.m */; };
+		AFC48106198D3EB8006BCC52 /* PracticeSession.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC48105198D3EB8006BCC52 /* PracticeSession.m */; };
+		AFC48109198D3EB8006BCC52 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC48108198D3EB8006BCC52 /* User.m */; };
+		AFC4810C198D3EB8006BCC52 /* GuidedMeditation.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC4810B198D3EB8006BCC52 /* GuidedMeditation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +70,8 @@
 /* Begin PBXFileReference section */
 		AF0BA7A419875D66001ADA56 /* GuidedMeditationsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidedMeditationsTVC.h; sourceTree = "<group>"; };
 		AF0BA7A519875D66001ADA56 /* GuidedMeditationsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidedMeditationsTVC.m; sourceTree = "<group>"; };
+		AF1929C8198869E400CC9B91 /* GuidedMeditationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidedMeditationVC.h; sourceTree = "<group>"; };
+		AF1929C9198869E400CC9B91 /* GuidedMeditationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidedMeditationVC.m; sourceTree = "<group>"; };
 		AF22CBC519829D77002C2D95 /* beep-ping.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "beep-ping.wav"; sourceTree = "<group>"; };
 		AF22CBC619829D77002C2D95 /* zen-temple-bell.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "zen-temple-bell.wav"; sourceTree = "<group>"; };
 		AF22CBC719829D77002C2D95 /* doorbell.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = doorbell.wav; sourceTree = "<group>"; };
@@ -68,22 +79,22 @@
 		AF22CBC919829D77002C2D95 /* ship-bell.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "ship-bell.wav"; sourceTree = "<group>"; };
 		AF22CBCA19829D77002C2D95 /* gong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gong.wav; sourceTree = "<group>"; };
 		AF22CBD119831CE7002C2D95 /* Model 7.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 7.xcdatamodel"; sourceTree = "<group>"; };
-		AF22CBD219831E85002C2D95 /* GuidedMeditation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidedMeditation.h; sourceTree = "<group>"; };
-		AF22CBD319831E85002C2D95 /* GuidedMeditation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidedMeditation.m; sourceTree = "<group>"; };
-		AF22CBD519831E85002C2D95 /* PracticeSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PracticeSession.h; sourceTree = "<group>"; };
-		AF22CBD619831E85002C2D95 /* PracticeSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PracticeSession.m; sourceTree = "<group>"; };
-		AF22CBD819831E85002C2D95 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
-		AF22CBD919831E85002C2D95 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
-		AF22CBDB19831E85002C2D95 /* MindfulMinuteTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MindfulMinuteTemplate.h; sourceTree = "<group>"; };
-		AF22CBDC19831E85002C2D95 /* MindfulMinuteTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MindfulMinuteTemplate.m; sourceTree = "<group>"; };
-		AF22CBDE19831E85002C2D95 /* MindfulMinuteInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MindfulMinuteInstance.h; sourceTree = "<group>"; };
-		AF22CBDF19831E85002C2D95 /* MindfulMinuteInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MindfulMinuteInstance.m; sourceTree = "<group>"; };
-		AF22CBE119831E85002C2D95 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
-		AF22CBE219831E85002C2D95 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		AF22CBE419831E86002C2D95 /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
-		AF22CBE519831E86002C2D95 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
-		AF22CBE719831E86002C2D95 /* AudioFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFile.h; sourceTree = "<group>"; };
-		AF22CBE819831E86002C2D95 /* AudioFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioFile.m; sourceTree = "<group>"; };
+		AF387607198B1FE30090D5EC /* AddUserVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddUserVC.h; sourceTree = "<group>"; };
+		AF387608198B1FE30090D5EC /* AddUserVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddUserVC.m; sourceTree = "<group>"; };
+		AF6AC7F019887EDF0089855A /* MeditationTimerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeditationTimerVC.h; sourceTree = "<group>"; };
+		AF6AC7F119887EDF0089855A /* MeditationTimerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeditationTimerVC.m; sourceTree = "<group>"; };
+		AF6AC7F6198946E00089855A /* StatsTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsTVC.h; sourceTree = "<group>"; };
+		AF6AC7F7198946E00089855A /* StatsTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsTVC.m; sourceTree = "<group>"; };
+		AF6AC813198972070089855A /* CoreDataPickerTF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataPickerTF.h; sourceTree = "<group>"; };
+		AF6AC814198972070089855A /* CoreDataPickerTF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataPickerTF.m; sourceTree = "<group>"; };
+		AF6AC81A198975660089855A /* PickerTF_User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerTF_User.h; sourceTree = "<group>"; };
+		AF6AC81B198975660089855A /* PickerTF_User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerTF_User.m; sourceTree = "<group>"; };
+		AF6AC81D198977B90089855A /* UserInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoVC.h; sourceTree = "<group>"; };
+		AF6AC81E198977B90089855A /* UserInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoVC.m; sourceTree = "<group>"; };
+		AF95FC251992972F00D792F3 /* PickerTF_Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerTF_Location.h; sourceTree = "<group>"; };
+		AF95FC261992972F00D792F3 /* PickerTF_Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerTF_Location.m; sourceTree = "<group>"; };
+		AF95FC281992974200D792F3 /* PickerTF_Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerTF_Course.h; sourceTree = "<group>"; };
+		AF95FC291992974200D792F3 /* PickerTF_Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerTF_Course.m; sourceTree = "<group>"; };
 		AFAA61EF19871C47002B7BC8 /* 5_minute_meditation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 5_minute_meditation.mp3; sourceTree = "<group>"; };
 		AFB7764B197895C1009EC7E4 /* WorkWell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkWell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB7764E197895C1009EC7E4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -122,6 +133,23 @@
 		AFB77771197B699E009EC7E4 /* tibetan_bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tibetan_bell.mp3; sourceTree = "<group>"; };
 		AFB777A3197B6B9D009EC7E4 /* Model 6.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 6.xcdatamodel"; sourceTree = "<group>"; };
 		AFB777A4197B6BDD009EC7E4 /* Model5ToModel6.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = Model5ToModel6.xcmappingmodel; sourceTree = "<group>"; };
+		AFC480F4198D3DD5006BCC52 /* Model 8.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 8.xcdatamodel"; sourceTree = "<group>"; };
+		AFC480F5198D3EB7006BCC52 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		AFC480F6198D3EB7006BCC52 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		AFC480F8198D3EB7006BCC52 /* MindfulMinuteTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MindfulMinuteTemplate.h; sourceTree = "<group>"; };
+		AFC480F9198D3EB7006BCC52 /* MindfulMinuteTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MindfulMinuteTemplate.m; sourceTree = "<group>"; };
+		AFC480FB198D3EB7006BCC52 /* MindfulMinuteInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MindfulMinuteInstance.h; sourceTree = "<group>"; };
+		AFC480FC198D3EB7006BCC52 /* MindfulMinuteInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MindfulMinuteInstance.m; sourceTree = "<group>"; };
+		AFC480FE198D3EB7006BCC52 /* AudioFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioFile.h; sourceTree = "<group>"; };
+		AFC480FF198D3EB7006BCC52 /* AudioFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioFile.m; sourceTree = "<group>"; };
+		AFC48101198D3EB7006BCC52 /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
+		AFC48102198D3EB7006BCC52 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
+		AFC48104198D3EB8006BCC52 /* PracticeSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PracticeSession.h; sourceTree = "<group>"; };
+		AFC48105198D3EB8006BCC52 /* PracticeSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PracticeSession.m; sourceTree = "<group>"; };
+		AFC48107198D3EB8006BCC52 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		AFC48108198D3EB8006BCC52 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		AFC4810A198D3EB8006BCC52 /* GuidedMeditation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidedMeditation.h; sourceTree = "<group>"; };
+		AFC4810B198D3EB8006BCC52 /* GuidedMeditation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidedMeditation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +177,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF6AC816198973F90089855A /* WorkWell Picker Views */ = {
+			isa = PBXGroup;
+			children = (
+				AF6AC81A198975660089855A /* PickerTF_User.h */,
+				AF6AC81B198975660089855A /* PickerTF_User.m */,
+				AF95FC251992972F00D792F3 /* PickerTF_Location.h */,
+				AF95FC261992972F00D792F3 /* PickerTF_Location.m */,
+				AF95FC281992974200D792F3 /* PickerTF_Course.h */,
+				AF95FC291992974200D792F3 /* PickerTF_Course.m */,
+			);
+			name = "WorkWell Picker Views";
+			sourceTree = "<group>";
+		};
 		AFB77642197895C1009EC7E4 = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +224,7 @@
 		AFB77654197895C1009EC7E4 /* WorkWell */ = {
 			isa = PBXGroup;
 			children = (
+				AF6AC816198973F90089855A /* WorkWell Picker Views */,
 				AFB77770197B6989009EC7E4 /* Media */,
 				AFB7774F1979ED0C009EC7E4 /* WorkWell Views */,
 				AFB7771B197998F0009EC7E4 /* Helper Functions */,
@@ -231,23 +273,23 @@
 		AFB77685197895EC009EC7E4 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				AF22CBD219831E85002C2D95 /* GuidedMeditation.h */,
-				AF22CBD319831E85002C2D95 /* GuidedMeditation.m */,
-				AF22CBE719831E86002C2D95 /* AudioFile.h */,
-				AF22CBE819831E86002C2D95 /* AudioFile.m */,
-				AF22CBE419831E86002C2D95 /* Course.h */,
-				AF22CBE519831E86002C2D95 /* Course.m */,
-				AF22CBE119831E85002C2D95 /* User.h */,
-				AF22CBE219831E85002C2D95 /* User.m */,
-				AF22CBDE19831E85002C2D95 /* MindfulMinuteInstance.h */,
-				AF22CBDF19831E85002C2D95 /* MindfulMinuteInstance.m */,
-				AF22CBDB19831E85002C2D95 /* MindfulMinuteTemplate.h */,
-				AF22CBDC19831E85002C2D95 /* MindfulMinuteTemplate.m */,
-				AF22CBD819831E85002C2D95 /* Location.h */,
-				AF22CBD919831E85002C2D95 /* Location.m */,
-				AF22CBD519831E85002C2D95 /* PracticeSession.h */,
-				AF22CBD619831E85002C2D95 /* PracticeSession.m */,
 				AFB776861978960D009EC7E4 /* Model.xcdatamodeld */,
+				AFC4810A198D3EB8006BCC52 /* GuidedMeditation.h */,
+				AFC4810B198D3EB8006BCC52 /* GuidedMeditation.m */,
+				AFC48107198D3EB8006BCC52 /* User.h */,
+				AFC48108198D3EB8006BCC52 /* User.m */,
+				AFC48104198D3EB8006BCC52 /* PracticeSession.h */,
+				AFC48105198D3EB8006BCC52 /* PracticeSession.m */,
+				AFC48101198D3EB7006BCC52 /* Course.h */,
+				AFC48102198D3EB7006BCC52 /* Course.m */,
+				AFC480FE198D3EB7006BCC52 /* AudioFile.h */,
+				AFC480FF198D3EB7006BCC52 /* AudioFile.m */,
+				AFC480FB198D3EB7006BCC52 /* MindfulMinuteInstance.h */,
+				AFC480FC198D3EB7006BCC52 /* MindfulMinuteInstance.m */,
+				AFC480F8198D3EB7006BCC52 /* MindfulMinuteTemplate.h */,
+				AFC480F9198D3EB7006BCC52 /* MindfulMinuteTemplate.m */,
+				AFC480F5198D3EB7006BCC52 /* Location.h */,
+				AFC480F6198D3EB7006BCC52 /* Location.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -268,6 +310,8 @@
 				AFB7768B1978A7B3009EC7E4 /* CoreDataHelper.m */,
 				AFB77713197988B4009EC7E4 /* CoreDataTVC.h */,
 				AFB77714197988B4009EC7E4 /* CoreDataTVC.m */,
+				AF6AC813198972070089855A /* CoreDataPickerTF.h */,
+				AF6AC814198972070089855A /* CoreDataPickerTF.m */,
 			);
 			name = "Generic Core Data Classes";
 			sourceTree = "<group>";
@@ -279,6 +323,8 @@
 				AFB777181979919B009EC7E4 /* MindfulMinutesTVC.m */,
 				AF0BA7A419875D66001ADA56 /* GuidedMeditationsTVC.h */,
 				AF0BA7A519875D66001ADA56 /* GuidedMeditationsTVC.m */,
+				AF6AC7F6198946E00089855A /* StatsTVC.h */,
+				AF6AC7F7198946E00089855A /* StatsTVC.m */,
 			);
 			name = "WorkWell TableViews";
 			sourceTree = "<group>";
@@ -297,6 +343,14 @@
 			children = (
 				AFB777501979ED58009EC7E4 /* MindfulMinuteVC.h */,
 				AFB777511979ED58009EC7E4 /* MindfulMinuteVC.m */,
+				AF1929C8198869E400CC9B91 /* GuidedMeditationVC.h */,
+				AF1929C9198869E400CC9B91 /* GuidedMeditationVC.m */,
+				AF6AC7F019887EDF0089855A /* MeditationTimerVC.h */,
+				AF6AC7F119887EDF0089855A /* MeditationTimerVC.m */,
+				AF6AC81D198977B90089855A /* UserInfoVC.h */,
+				AF6AC81E198977B90089855A /* UserInfoVC.m */,
+				AF387607198B1FE30090D5EC /* AddUserVC.h */,
+				AF387608198B1FE30090D5EC /* AddUserVC.m */,
 			);
 			name = "WorkWell Views";
 			sourceTree = "<group>";
@@ -421,24 +475,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFC48109198D3EB8006BCC52 /* User.m in Sources */,
 				AFB777A5197B6BDD009EC7E4 /* Model5ToModel6.xcmappingmodel in Sources */,
-				AF22CBE319831E85002C2D95 /* User.m in Sources */,
 				AFB7772A1979ACF9009EC7E4 /* Model4ToModel5.xcmappingmodel in Sources */,
-				AF22CBE619831E86002C2D95 /* Course.m in Sources */,
-				AF22CBDA19831E85002C2D95 /* Location.m in Sources */,
+				AF1929CA198869E400CC9B91 /* GuidedMeditationVC.m in Sources */,
+				AF95FC2A1992974200D792F3 /* PickerTF_Course.m in Sources */,
+				AF387609198B1FE30090D5EC /* AddUserVC.m in Sources */,
+				AF95FC271992972F00D792F3 /* PickerTF_Location.m in Sources */,
+				AF6AC7F8198946E00089855A /* StatsTVC.m in Sources */,
+				AFC480FA198D3EB7006BCC52 /* MindfulMinuteTemplate.m in Sources */,
 				AFB777191979919B009EC7E4 /* MindfulMinutesTVC.m in Sources */,
-				AF22CBE919831E86002C2D95 /* AudioFile.m in Sources */,
-				AF22CBE019831E85002C2D95 /* MindfulMinuteInstance.m in Sources */,
-				AF22CBD719831E85002C2D95 /* PracticeSession.m in Sources */,
+				AFC480FD198D3EB7006BCC52 /* MindfulMinuteInstance.m in Sources */,
+				AF6AC7F219887EDF0089855A /* MeditationTimerVC.m in Sources */,
 				AFB7771E19799922009EC7E4 /* UsefulFunctions.m in Sources */,
+				AF6AC815198972070089855A /* CoreDataPickerTF.m in Sources */,
+				AFC480F7198D3EB7006BCC52 /* Location.m in Sources */,
+				AFC48103198D3EB7006BCC52 /* Course.m in Sources */,
+				AF6AC81F198977B90089855A /* UserInfoVC.m in Sources */,
+				AFC4810C198D3EB8006BCC52 /* GuidedMeditation.m in Sources */,
 				AFB77715197988B4009EC7E4 /* CoreDataTVC.m in Sources */,
 				AF0BA7A619875D66001ADA56 /* GuidedMeditationsTVC.m in Sources */,
-				AF22CBDD19831E85002C2D95 /* MindfulMinuteTemplate.m in Sources */,
+				AFC48106198D3EB8006BCC52 /* PracticeSession.m in Sources */,
+				AF6AC81C198975660089855A /* PickerTF_User.m in Sources */,
 				AFB7765F197895C1009EC7E4 /* AppDelegate.m in Sources */,
 				AFB7765B197895C1009EC7E4 /* main.m in Sources */,
-				AF22CBD419831E85002C2D95 /* GuidedMeditation.m in Sources */,
 				AFB7768C1978A7B3009EC7E4 /* CoreDataHelper.m in Sources */,
 				AFB776881978960D009EC7E4 /* Model.xcdatamodeld in Sources */,
+				AFC48100198D3EB7006BCC52 /* AudioFile.m in Sources */,
 				AFB777521979ED58009EC7E4 /* MindfulMinuteVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -661,6 +724,7 @@
 		AFB776861978960D009EC7E4 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				AFC480F4198D3DD5006BCC52 /* Model 8.xcdatamodel */,
 				AF22CBD119831CE7002C2D95 /* Model 7.xcdatamodel */,
 				AFB777A3197B6B9D009EC7E4 /* Model 6.xcdatamodel */,
 				AFB777221979A7C0009EC7E4 /* Model 5.xcdatamodel */,
@@ -669,7 +733,7 @@
 				AFB776A21978EF0C009EC7E4 /* Model 2.xcdatamodel */,
 				AFB776871978960D009EC7E4 /* Model.xcdatamodel */,
 			);
-			currentVersion = AF22CBD119831CE7002C2D95 /* Model 7.xcdatamodel */;
+			currentVersion = AFC480F4198D3DD5006BCC52 /* Model 8.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

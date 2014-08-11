@@ -45,6 +45,7 @@
 - (IBAction)done:(id)sender {
     if (debug==1) {NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));}
     
+    [(AppDelegate*)[[UIApplication sharedApplication] delegate] updateNotifications];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

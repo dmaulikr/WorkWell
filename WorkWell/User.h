@@ -2,7 +2,7 @@
 //  User.h
 //  WorkWell
 //
-//  Created by Aaron Wells on 7/25/14.
+//  Created by Aaron Wells on 8/2/14.
 //  Copyright (c) 2014 Aaron Wells. All rights reserved.
 //
 
@@ -16,6 +16,7 @@
 @property (nonatomic, retain) NSString * firstName;
 @property (nonatomic, retain) NSString * lastName;
 @property (nonatomic, retain) NSString * username;
+@property (nonatomic, retain) NSString * password;
 @property (nonatomic, retain) Course *course;
 @property (nonatomic, retain) Location *location;
 @property (nonatomic, retain) NSSet *practiceSessions;

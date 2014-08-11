@@ -8,6 +8,7 @@
 
 #import "GuidedMeditationsTVC.h"
 #import "GuidedMeditation.h"
+#import "GuidedMeditationVC.h"
 #import "CoreDataHelper.h"
 #import "AudioFile.h"
 #import "AppDelegate.h"
@@ -39,7 +40,7 @@
     self.frc =
     [[NSFetchedResultsController alloc] initWithFetchRequest:request
                                         managedObjectContext:cdh.context
-                                          sectionNameKeyPath:@"title"
+                                          sectionNameKeyPath:nil
                                                    cacheName:nil];
     
     self.frc.delegate = self;
@@ -94,6 +95,24 @@
     return nil; // we don't want a section index.
 }
 
+#pragma mark - DATASOURCE
 
+- (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return @"Meditation Title";
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+#pragma mark - INTERACTION
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (debug==1) {NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));}
+    
+    GuidedMeditationVC *gmVC = [self.storyboard instantiateViewControllerWithIdentifier:@"GuidedMeditationVC"];
+    gmVC.selectedMeditationID = [[self.frc objectAtIndexPath:indexPath] objectID];
+    [self.navigationController pushViewController:gmVC animated:YES];
+}
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "CoreDataTVC.h"
-@class CoreDataHelper, GuidedMeditation, AudioFile, AppDelegate;
+@class CoreDataHelper, GuidedMeditation, GuidedMeditationVC, AudioFile, AppDelegate;
 
 @interface GuidedMeditationsTVC : CoreDataTVC
 

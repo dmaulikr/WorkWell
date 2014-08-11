@@ -15,6 +15,9 @@
 #import "UsefulFunctions.h"
 #import "AudioFile.h"
 #import "GuidedMeditation.h"
+@class Location, Course;
+
+#define CurrentUserKey @"CurrentUser"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -23,4 +26,6 @@
 
 - (CoreDataHelper*)cdh;
 - (void)scheduleMindfulMinuteNotifications;
+- (User*) currentUser;
+- (void)updateNotifications;
 @end

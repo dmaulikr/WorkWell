@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "Location.h"
+#import "Course.h"
 
 @interface AppDelegate ()
 @property (strong, nonatomic)NSDateFormatter *df;
@@ -65,6 +67,28 @@
 //        [_coreDataHelper.context deleteObject:gm];
 //    }
     
+//    [[NSUserDefaults standardUserDefaults] setObject:@"chacewells" forKey:CurrentUserKey];
+//    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+//    [[NSUserDefaults standardUserDefaults] removeObjectForKey:CurrentUserKey];
+//    [[NSUserDefaults standardUserDefaults] synchronize];
+
+//    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"PracticeSession"];
+//    NSError *error = nil;
+//    NSArray *fetchedObjects = [_coreDataHelper.context executeFetchRequest:request error:&error];
+//    for (PracticeSession *ps in fetchedObjects) {
+//        [_coreDataHelper.context deleteObject:ps];
+//    }
+//    Location *loc = [NSEntityDescription insertNewObjectForEntityForName:@"Location" inManagedObjectContext:_coreDataHelper.context];
+//    loc.name = @"St Joseph";
+//    Course *course = [NSEntityDescription insertNewObjectForEntityForName:@"Course" inManagedObjectContext:_coreDataHelper.context];
+//    course.name = @"the good one";
+    
+//    User *user = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:_coreDataHelper.context];
+//    user.username = @"penguin";
+//    user.firstName = @"Bass";
+//    user.lastName = @"McGhie";
+    
     [_coreDataHelper saveContext];
 }
 
@@ -109,6 +133,7 @@
     [self dateFormatter];
     [self cdh];
     [self demo];
+    [self updateNotifications];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -261,6 +286,7 @@
 #pragma mark - NOTIFICATIONS
 - (void)updateNotifications {
     // TODO: cleanup code and debugging tools
+    int i;
     
     // get MindfulMinuteInstances from "database"
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"MindfulMinuteInstance"];
@@ -312,7 +338,7 @@
         
     }
     
-    NSLog(@"notifications count: %d", notifications.count);
+    if (debug==1) {NSLog(@"notifications count: %d", notifications.count);}
     
     // assign notifications to arrays in mmArray
     // MARK: cancel notifications without corresponding MindfulMinuteInstances
@@ -339,12 +365,14 @@
         }
     }
     
-    for (mmSubArray in mmArray) {
-        NSLog(@"objects in subarray: %d", [[mmSubArray objectAtIndex:1] count]);
+    if (debug==1) {
+        for (mmSubArray in mmArray) {
+            NSLog(@"objects in subarray: %d", [[mmSubArray objectAtIndex:1] count]);
+        }
     }
     
     if (debug == 1) {
-        int i = 1;
+        i = 1;
         for (mmSubArray in mmArray) {
             int j = 1;
             for (UILocalNotification *theNotification in [mmSubArray objectAtIndex:1]) {
@@ -356,8 +384,8 @@
     }
     
     if (debug==1) { NSLog(@"mmArray count: %d", mmArray.count); }
-    int i = 0;
     if (debug==1) {
+        i = 0;
         for (mmSubArray in mmArray) {
             for (id object in mmSubArray) {
                 NSLog(@"%@", [object class]);
@@ -402,6 +430,28 @@
             }
         }
     }
+}
+
+#pragma mark - USER
+- (User*) currentUser {
+    User *currentUser;
+    NSString *username = [[NSUserDefaults standardUserDefaults] objectForKey:CurrentUserKey];
+    if (username == nil) {
+        currentUser = nil;
+    } else {
+        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"User"];
+        NSPredicate *filter = [NSPredicate predicateWithFormat:@"username = %@", username];
+        request.predicate = filter;
+        NSError *error = nil;
+        @try {
+            currentUser = [[_coreDataHelper.context executeFetchRequest:request error:&error] objectAtIndex:0];
+            if (error) {NSLog(@"Error: %@ '%@'", error, [error localizedDescription]);}
+        } @catch (NSException *e) {
+            currentUser = nil;
+        }
+    }
+    
+    return currentUser;
 }
 
 @end
