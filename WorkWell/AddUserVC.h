@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "UserInfoVC.h"
+#import "Reachability.h"
+#import "XMLUtility.h"
 
-@interface AddUserVC : UIViewController
+@interface AddUserVC : UIViewController <NSURLConnectionDelegate, NSURLConnectionDataDelegate>
 @property (strong, nonatomic)NSManagedObjectID *selectedUserID;
 
 @end

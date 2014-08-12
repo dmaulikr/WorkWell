@@ -71,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ZA-eS-M7E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="986" y="-506"/>
+            <point key="canvasLocation" x="968" y="-506"/>
         </scene>
         <!--StatsTVC - User Stats-->
         <scene sceneID="csA-gE-OsG">

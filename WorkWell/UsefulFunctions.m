@@ -159,24 +159,4 @@
 + (id)randomObjectFromArray:(NSArray*)array {
     return [array objectAtIndex:(arc4random() % array.count)];
 }
-
-#pragma mark - XML
-+ (NSString*)xmlFromUser:(User*)user {
-    NSString *xml = [NSString stringWithFormat:@"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><User><Username>%@</Username><Password>%@</Password><FirstName>%@</FirstName><LastName>%@</LastName><Location><Name>%@</Name></Location><Course><Name>%@</Name></Course></User>",
-                     user.username,
-                     user.password,
-                     user.firstName,
-                     user.lastName,
-                     user.location.name,
-                     user.course.name];
-    return xml;
-}
-+ (NSString*)xmlFromPracticeSession:(PracticeSession *)practiceSession {
-    NSString *xml = [NSString stringWithFormat:@"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><PracticeSession><Id></Id><Date>%@</Date><Duration>%f</Duration><Guided>%d</Guided><Username>%@</Username></PracticeSession>",
-                     [UsefulFunctions UNIXformattedStringWithUTCTimeFromDate:practiceSession.date],
-                     [practiceSession.duration doubleValue],
-                     [practiceSession.guided boolValue],
-                     practiceSession.user.username];
-    return xml;
-}
 @end

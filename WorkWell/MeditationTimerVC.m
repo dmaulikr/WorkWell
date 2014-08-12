@@ -13,6 +13,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *minutesField;
 @property (weak, nonatomic) IBOutlet UITextField *pacerField;
 @property (weak, nonatomic) IBOutlet UIButton *startButton;
+@property (strong, nonatomic) Reachability *reachability;
+@property (strong, nonatomic) NSMutableData *connectionData;
 @property (weak) NSTimer *countdownTimer;
 @property (weak) NSTimer *pacerTimer;
 @property NSTimeInterval timeLeft;
@@ -26,13 +28,16 @@
 @end
 
 @implementation MeditationTimerVC
+#define debug 1
 #define kSecondsPerMinute 60.0
 #define kAlertSound @"ting"
+#define kAddPracticeSessionPath @"http://localhost/workwell_nw/controllers/add_practice_session.php"
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.timerSessionIsInProgress = NO;
+    _reachability = [Reachability reachabilityWithHostName:kReachabilityHostName];
 }
 
 - (void)didReceiveMemoryWarning
@@ -155,7 +160,41 @@
     practiceSession.duration = [NSNumber numberWithDouble:self.timeElapsed];
     practiceSession.guided = [NSNumber numberWithBool:NO];
     practiceSession.user = [(AppDelegate*)[[UIApplication sharedApplication] delegate] currentUser];
+    [self sendPracticeSessionToServer:practiceSession];
     [cdh saveContext];
+}
+
+#pragma mark - CONNECTION
+- (void)sendPracticeSessionToServer:(PracticeSession*)practiceSession {
+    NSString *xml = [XMLUtility xmlFromPracticeSession:practiceSession];
+    
+    if ([_reachability isReachable]) {
+        NSString *path = kAddPracticeSessionPath;
+        NSURL *url = [NSURL URLWithString:path];
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
+        [request setHTTPMethod:@"POST"];
+        
+        [request setValue:@"text/plain; charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
+        [request setValue:[NSString stringWithFormat:@"%d", [xml length]] forHTTPHeaderField:@"Content-Length"];
+        [request setHTTPBody:[xml dataUsingEncoding:NSUTF8StringEncoding]];
+        
+        self.connectionData = [[NSMutableData alloc] initWithCapacity:0];
+        
+        NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+        
+        if (!connection)
+            self.connectionData = nil;
+    }
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    [self.connectionData appendData:data];
+    if (debug==1) NSLog(@"%@ '%@': data received", self.class, NSStringFromSelector(_cmd));
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    NSString *string = [[NSString alloc] initWithData:self.connectionData encoding:NSISOLatin1StringEncoding];
+    if (debug==1) NSLog(@"Server response: %@", string);
 }
 
 @end

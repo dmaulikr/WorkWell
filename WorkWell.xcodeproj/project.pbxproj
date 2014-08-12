@@ -21,6 +21,8 @@
 		AF6AC815198972070089855A /* CoreDataPickerTF.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6AC814198972070089855A /* CoreDataPickerTF.m */; };
 		AF6AC81C198975660089855A /* PickerTF_User.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6AC81B198975660089855A /* PickerTF_User.m */; };
 		AF6AC81F198977B90089855A /* UserInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6AC81E198977B90089855A /* UserInfoVC.m */; };
+		AF725EFE19999E0D00380A60 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = AF725EFD19999E0D00380A60 /* Reachability.m */; };
+		AF725F011999A0C900380A60 /* XMLUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = AF725F001999A0C900380A60 /* XMLUtility.m */; };
 		AF95FC271992972F00D792F3 /* PickerTF_Location.m in Sources */ = {isa = PBXBuildFile; fileRef = AF95FC261992972F00D792F3 /* PickerTF_Location.m */; };
 		AF95FC2A1992974200D792F3 /* PickerTF_Course.m in Sources */ = {isa = PBXBuildFile; fileRef = AF95FC291992974200D792F3 /* PickerTF_Course.m */; };
 		AFAA61F019871C47002B7BC8 /* 5_minute_meditation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AFAA61EF19871C47002B7BC8 /* 5_minute_meditation.mp3 */; };
@@ -91,6 +93,10 @@
 		AF6AC81B198975660089855A /* PickerTF_User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerTF_User.m; sourceTree = "<group>"; };
 		AF6AC81D198977B90089855A /* UserInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoVC.h; sourceTree = "<group>"; };
 		AF6AC81E198977B90089855A /* UserInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoVC.m; sourceTree = "<group>"; };
+		AF725EFC19999E0D00380A60 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		AF725EFD19999E0D00380A60 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		AF725EFF1999A0C900380A60 /* XMLUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLUtility.h; sourceTree = "<group>"; };
+		AF725F001999A0C900380A60 /* XMLUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLUtility.m; sourceTree = "<group>"; };
 		AF95FC251992972F00D792F3 /* PickerTF_Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerTF_Location.h; sourceTree = "<group>"; };
 		AF95FC261992972F00D792F3 /* PickerTF_Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerTF_Location.m; sourceTree = "<group>"; };
 		AF95FC281992974200D792F3 /* PickerTF_Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerTF_Course.h; sourceTree = "<group>"; };
@@ -227,7 +233,7 @@
 				AF6AC816198973F90089855A /* WorkWell Picker Views */,
 				AFB77770197B6989009EC7E4 /* Media */,
 				AFB7774F1979ED0C009EC7E4 /* WorkWell Views */,
-				AFB7771B197998F0009EC7E4 /* Helper Functions */,
+				AFB7771B197998F0009EC7E4 /* Utility Classes */,
 				AFB7771619799159009EC7E4 /* WorkWell TableViews */,
 				AFB776A61978F427009EC7E4 /* Generic Core Data Classes */,
 				AFB776A51978F2C1009EC7E4 /* Mapping Models */,
@@ -329,13 +335,17 @@
 			name = "WorkWell TableViews";
 			sourceTree = "<group>";
 		};
-		AFB7771B197998F0009EC7E4 /* Helper Functions */ = {
+		AFB7771B197998F0009EC7E4 /* Utility Classes */ = {
 			isa = PBXGroup;
 			children = (
+				AF725EFC19999E0D00380A60 /* Reachability.h */,
+				AF725EFD19999E0D00380A60 /* Reachability.m */,
 				AFB7771C19799922009EC7E4 /* UsefulFunctions.h */,
 				AFB7771D19799922009EC7E4 /* UsefulFunctions.m */,
+				AF725EFF1999A0C900380A60 /* XMLUtility.h */,
+				AF725F001999A0C900380A60 /* XMLUtility.m */,
 			);
-			name = "Helper Functions";
+			name = "Utility Classes";
 			sourceTree = "<group>";
 		};
 		AFB7774F1979ED0C009EC7E4 /* WorkWell Views */ = {
@@ -481,6 +491,7 @@
 				AF1929CA198869E400CC9B91 /* GuidedMeditationVC.m in Sources */,
 				AF95FC2A1992974200D792F3 /* PickerTF_Course.m in Sources */,
 				AF387609198B1FE30090D5EC /* AddUserVC.m in Sources */,
+				AF725F011999A0C900380A60 /* XMLUtility.m in Sources */,
 				AF95FC271992972F00D792F3 /* PickerTF_Location.m in Sources */,
 				AF6AC7F8198946E00089855A /* StatsTVC.m in Sources */,
 				AFC480FA198D3EB7006BCC52 /* MindfulMinuteTemplate.m in Sources */,
@@ -499,6 +510,7 @@
 				AF6AC81C198975660089855A /* PickerTF_User.m in Sources */,
 				AFB7765F197895C1009EC7E4 /* AppDelegate.m in Sources */,
 				AFB7765B197895C1009EC7E4 /* main.m in Sources */,
+				AF725EFE19999E0D00380A60 /* Reachability.m in Sources */,
 				AFB7768C1978A7B3009EC7E4 /* CoreDataHelper.m in Sources */,
 				AFB776881978960D009EC7E4 /* Model.xcdatamodeld in Sources */,
 				AFC48100198D3EB7006BCC52 /* AudioFile.m in Sources */,

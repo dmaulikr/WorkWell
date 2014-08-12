@@ -27,7 +27,4 @@
 
 + (id)randomObjectFromArray:(NSArray*)array;
 
-+ (NSString*)xmlFromUser:(User*)user;
-+ (NSString*)xmlFromPracticeSession:(PracticeSession*)practiceSession;
-
 @end

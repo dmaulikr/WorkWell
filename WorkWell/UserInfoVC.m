@@ -108,7 +108,7 @@
     CoreDataHelper *cdh = [(AppDelegate *)[[UIApplication sharedApplication] delegate] cdh];
     User *user;
     
-    NSLog(@"User ID: %@", self.selectedUserID);
+    if (debug==1) NSLog(@"User ID: %@", self.selectedUserID);
     if (self.selectedUserID) {
         user = (User*)[cdh.context existingObjectWithID:self.selectedUserID error:nil];
         [self updateTextFieldsWithUser:user];

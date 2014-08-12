@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "UsefulFunctions.h"
 #import "AppDelegate.h"
+#import "Reachability.h"
+#import "XMLUtility.h"
 @import AudioToolbox;
 
-@interface MeditationTimerVC : UIViewController
+@interface MeditationTimerVC : UIViewController <NSURLConnectionDelegate, NSURLConnectionDataDelegate>
 
 @end

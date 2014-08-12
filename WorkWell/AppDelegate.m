@@ -84,11 +84,6 @@
 //    Course *course = [NSEntityDescription insertNewObjectForEntityForName:@"Course" inManagedObjectContext:_coreDataHelper.context];
 //    course.name = @"the good one";
     
-//    User *user = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:_coreDataHelper.context];
-//    user.username = @"penguin";
-//    user.firstName = @"Bass";
-//    user.lastName = @"McGhie";
-    
     [_coreDataHelper saveContext];
 }
 
@@ -316,8 +311,12 @@
     NSArray *notifications = [[[UIApplication sharedApplication] scheduledLocalNotifications] sortedArrayUsingComparator:notificationComparator];
     
     // MARK: update to skip notification update when allowableNotificationCount==0
-    int remainingAllowableNotificationsCount = (kMaxNotificationsAllowed + notifications.count) / mmis.count;
-    int totalAllowableNotificationsCount = kMaxNotificationsAllowed / mmis.count;
+    if (mmis.count == 0)
+        return;
+    int remainingAllowableNotificationsCount, totalAllowableNotificationsCount;
+    totalAllowableNotificationsCount = kMaxNotificationsAllowed / mmis.count;
+    remainingAllowableNotificationsCount = (kMaxNotificationsAllowed - notifications.count) / mmis.count;
+    
     if (debug == 1) {NSLog(@"total notifications allowed for each scheduled time: %d\n", remainingAllowableNotificationsCount);}
     
     if (remainingAllowableNotificationsCount == 0) {

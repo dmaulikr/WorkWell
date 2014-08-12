@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
+#import "Reachability.h"
+#import "PracticeSession.h"
+#import "User.h"
+#import "XMLUtility.h"
 
-@interface GuidedMeditationVC : UIViewController
+@interface GuidedMeditationVC : UIViewController <NSURLConnectionDelegate, NSURLConnectionDataDelegate>
 
 @property (strong, nonatomic) NSManagedObjectID *selectedMeditationID;
 
